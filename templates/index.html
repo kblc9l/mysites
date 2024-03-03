@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/awesome/css/all.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body,h1 {font-family: "Montserrat", sans-serif}
+		img {margin-bottom: -7px}
+		.w3-row-padding img {margin-bottom: 12px}
+	</style>
+
+	<title>Photolio</title>
+</head>
+<body>
+	<nav class='sidebar sidebar_anim' id="mySidebar">
+		<a class='sidebar__a a'href="#" onclick="nav_close()">	
+			<i class="fa-solid fa-xmark fa-3x sidebar__icon"></i>
+		</a>
+		<div class="sidebar__container">
+			<a href="#" class='sidebar__container__a a'>About</a>
+			<a href="#" class='sidebar__container__a a'>Photos</a>
+			<a href="#" class='sidebar__container__a a'>Shop</a>
+			<a href="#" class='sidebar__container__a a'>Contact</a>
+		</div>
+	</nav>
+<header class='header'>
+	<h1 class="header__h1 h1"><strong>PHOTOLIO</strong></h1>
+	<p>
+		<button class="header__padding_button" onclick="myFunc()">
+			Toggle Grid Padding
+		</button>		
+	</p>
+	<span class="header__menu_button" onclick="">
+		<i class="fa-solid fa-bars fa-3x header__menu_button__icon" onclick="nav_open()"></i>
+	</span>
+
+</header>
+<main class='grid' id='myGrid'>
+	<div class="grid__column">
+		<img src="../img/rocks.jpg" alt="" class="grid__column__img img">
+		<img src="../img/sound.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/woods.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/rock.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/nature.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/mist.jpg" alt="" class="grid__column__img img">
+	</div>
+	<div class="grid__column">
+		<img src="../img/coffee.jpg" alt="" class="grid__column__img img">
+		<img src="../img/bridge.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/notebook.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/london.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/rocks.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/avatar_g.jpg" alt="" class="grid__column__img img">
+	</div>
+	<div class="grid__column">
+		<img src="../img/mist.jpg" alt="" class="grid__column__img img">
+		<img src="../img/workbench.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/gondol.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/skies.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/lights.jpg" alt="" class="grid__column__img_center img">
+		<img src="../img/workshop.jpg" alt="" class="grid__column__img img">
+	</div>	
+</main>
+<footer class='footer'>
+	<div class="footer__links">
+		<i class="fa-brands fa-2x fa-facebook"></i>
+		<i class="fa-brands fa-2x fa-instagram"></i>
+		<i class="fa-brands fa-2x fa-square-snapchat"></i>
+		<i class="fa-brands fa-2x fa-square-pinterest"></i>
+		<i class="fa-brands fa-2x fa-twitter"></i>
+		<i class="fa-brands fa-2x fa-linkedin"></i>		
+	</div>
+	<p class='footer__p'>Powered by Andey Kiselev</p>
+</footer>
+<script>
+	
+    // Toggle grid padding
+	function myFunc() {
+	  var x = document.getElementById("myGrid");
+	  if (x.className === "grid") {
+	    x.className = "grid_padding";
+	  } else { 
+	    x.className = x.className.replace("grid_padding", "grid");
+	  }
+	}
+
+
+	// Open and close sidebar
+	function nav_open() {
+	  document.getElementById("mySidebar").style.width = "100%";
+	  document.getElementById("mySidebar").style.display = "block";
+	}
+
+	function nav_close() {
+	  document.getElementById("mySidebar").style.display = "none";
+	}
+
+</script>
+</body>
+</html>
